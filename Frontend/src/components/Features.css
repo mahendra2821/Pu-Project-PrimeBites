@@ -52,7 +52,7 @@
   .highlight {
     color: #facc15;
   }
-  
+
   /* Features Container */
   .features-container {
     display: grid;
@@ -93,12 +93,15 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: black;
   }
   
   /* Feature Description */
   .feature-desc {
     font-size: 1rem;
     opacity: 0.8;
+    color: black;
+
   }
   
   /* Responsive Styles */

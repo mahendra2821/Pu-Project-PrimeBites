@@ -1,0 +1,103 @@
+.about-us {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background 0.3s, color 0.3s;
+    margin-top: 20vh;
+  }
+  
+  /* Light and Dark Mode */
+  :root {
+    --bg-color: white;
+    --text-color: black;
+  }
+  .dark-mode {
+    --bg-color: black;
+    --text-color: white;
+  }
+  
+  /* Section Styling */
+  .section {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    color: #facc15; /* Yellow */
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Team Section */
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .image-container {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+  
+  .team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .team-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .section h2 {
+      font-size: 2rem;
+    }
+    .team-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

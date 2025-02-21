@@ -10,6 +10,11 @@ import { ThemeProvider } from "./ThemeContext";
 import './App.css';
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
+import DietPlans from "./components/DietPlans";
+import Item from "./components/Item";
+import Contact from "./components/Contact";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -31,6 +36,11 @@ function App() {
               </>
             } />
             <Route path="/aboutus" element={<AboutUs />} /> 
+            <Route path="/diet-plans" element={<DietPlans />} /> 
+            <Route path="/items" element={<Item />} /> 
+            <Route path="/contact" element={<Contact />} /> 
+            <Route path="/login" element={<Login/>} /> 
+            <Route path="/signup" element={<SignUp/>} /> 
           </Routes>
 
         </div>

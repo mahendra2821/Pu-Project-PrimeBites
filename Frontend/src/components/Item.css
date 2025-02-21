@@ -1,0 +1,98 @@
+/* Root Variables */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #ff9800;
+    --hover-color: #e68900;
+}
+
+/* Dark Mode */
+.dark {
+    --bg-color: #121212;
+    --text-color: #f9f9f9;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Meal Container */
+.meal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Meal Item */
+.meal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* Dark Mode for Meal Item */
+.dark .meal-item {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Meal Image */
+.meal-image-container {
+    flex: 1;
+    max-width: 40%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.meal-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Meal Info */
+.meal-info {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.meal-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Alternate Layout */
+.meal-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .meal-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .meal-item.reverse {
+        flex-direction: column;
+    }
+
+    .meal-image-container {
+        max-width: 100%;
+    }
+}

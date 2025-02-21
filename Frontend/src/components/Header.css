@@ -121,7 +121,7 @@ body {
     cursor: pointer;
     color: var(--primary-color);
     z-index: 1100;
-    margin-right: 10vw;
+    margin-right: 5;
 }
 
 /* Overlay (for when sidebar is open) */

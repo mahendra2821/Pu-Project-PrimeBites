@@ -1,0 +1,118 @@
+/* Global Styles */
+.diet-plans {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 10vh;
+}
+
+/* Light Mode */
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --card-bg: rgb(240, 240, 240);
+    --card-text: black;
+    --card-hover-bg: rgb(220, 220, 220);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: black;
+    --text-color: white;
+    --card-bg: rgb(30, 30, 30);
+    --card-text: white;
+    --card-hover-bg: rgb(50, 50, 50);
+}
+
+/* Apply theme colors to the entire page */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #facc15; /* Yellow */
+}
+
+/* Plans Grid */
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Plan Card */
+.plan-card {
+    background: var(--card-bg);
+    color: var(--card-text);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    background: var(--card-hover-bg);
+}
+
+/* Plan Image */
+.image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.plan-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.plan-image:hover {
+    transform: scale(1.05);
+}
+
+/* Plan Title */
+.plan-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Plan Description */
+.plan-description {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .plans-container {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-description {
+        font-size: 0.9rem;
+    }
+}

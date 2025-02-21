@@ -1,0 +1,131 @@
+/* Root Variables */
+:root {
+    --light-bg: #f9f9f9;
+    --light-text: #333;
+    --dark-bg: #121212;
+    --dark-text: #f9f9f9;
+    --primary-color: #ff9800;
+    --hover-color: #e68900;
+}
+
+/* Dark Mode Styles */
+.dark {
+    --light-bg: #121212;
+    --light-text: #f9f9f9;
+    --dark-bg: #1e1e1e;
+    --dark-text: #f9f9f9;
+}
+
+/* Login Page */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+}
+
+.toggle-button {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.toggle-button:hover {
+    background: var(--hover-color);
+    color: white;
+}
+
+/* Login Form Container */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+.login-form button {
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: var(--hover-color);
+}
+
+/* Additional Links */
+.login-links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* Apply Dark Mode */
+.dark .login-page {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark .login-container {
+    background: var(--dark-bg);
+}
+
+.dark .login-form input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
