@@ -1,0 +1,228 @@
+/* Root Variables */
+:root {
+    --light-bg: #f9f9f9;
+    --light-text: #333;
+    --dark-bg: #121212;
+    --dark-text: #f9f9f9;
+    --primary-color: #4caf50;
+    --hover-color: #45a049;
+    --sidebar-bg: #ffffff; /* Sidebar in Light Mode */
+}
+
+.dark-mode {
+    --light-bg: #121212;
+    --light-text: #f9f9f9;
+    --dark-bg: #1e1e1e;
+    --dark-text: #f9f9f9;
+    --primary-color: #ff9800;
+    --hover-color: #e68900;
+    --sidebar-bg: #000000; /* Sidebar in Dark Mode */
+}
+
+/* Body */
+body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Desktop Navbar */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    font-size: 1rem;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    transition: background 0.3s;
+}
+
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+    margin-right: 5vw;
+    border-radius: 40px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: blue;
+    transition: background 0.3s;
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: blue;
+    margin-left: 20vw;
+}
+
+.signup-btn {
+    background-color: var(--primary-color);
+    color: blue;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    opacity: 0.8;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    z-index: 1100;
+    margin-right: 10vw;
+}
+
+/* Overlay (for when sidebar is open) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 998;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Responsive: Mobile View */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--sidebar-bg);
+        color: var(--dark-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.4s ease-in-out, background 0.3s;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* Prevent scrolling when menu is open */
+    .menu-open {
+        overflow: hidden;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .mobile-theme-toggle {
+        margin-top: 10px;
+    }
+
+    /* Mobile Auth Buttons */
+    .login-btn, .signup-btn {
+        padding: 8px 12px;
+        cursor: pointer;
+        color: blue;
+        transition: background 0.3s;
+    }
+    
+    .login-btn {
+        background-color: var(--primary-color);
+        color: blue;
+        margin-right: 20vw;
+        margin-bottom: 10px;
+        padding-right: 8vw;
+    }
+
+    .dark-mode .nav-menu {
+        background: var(--dark-bg);
+        color: var(--light-text);
+    }
+
+    .dark-mode .sidebar {
+        background: var(--dark-bg);
+    }
+
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        color: var(--hover-color);
+    }
+}

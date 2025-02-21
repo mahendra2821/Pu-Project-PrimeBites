@@ -1,0 +1,69 @@
+/* Root Theme */
+:root {
+    --primary-bg: #ffcc00;
+    --primary-text: #222;
+    --dark-bg: #121212;
+    --dark-text: #f9f9f9;
+}
+
+.dark {
+    --primary-bg: #222;
+    --primary-text: #f9f9f9;
+}
+
+/* CTA Section */
+.cta {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Box */
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Title */
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #e68900;
+}
+
+/* CTA Text */
+.cta-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* Moving Text Effect */
+.moving-text {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta {
+        padding: 60px 15px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-text {
+        font-size: 1.2rem;
+    }
+}
